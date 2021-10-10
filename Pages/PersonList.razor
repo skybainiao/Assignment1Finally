@@ -1,0 +1,55 @@
+﻿@page "/PersonList"
+@using FileData
+@using global::Models
+@using Models
+
+<h1>Person List</h1>
+
+<p>This is the data of all personnel.</p>
+
+@if (_adults == null)
+{
+    <p>
+        <em>Loading...</em>
+    </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>HairColor</th>
+            <th>EyeColor</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var adult in _adults)
+        {
+            <tr>
+                <td>@adult.FirstName</td>
+                <td>@adult.LastName</td>
+                <td>@adult.HairColor</td>
+                <td>@adult.EyeColor</td>
+                <td>@adult.Age</td>
+                <td>@adult.Weight</td>
+                <td>@adult.Height</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    private IList<Adult> _adults = new List<Adult>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        _adults = new FileContext().Adults;
+    }
+
+}

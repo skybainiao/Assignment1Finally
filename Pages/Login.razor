@@ -1,0 +1,62 @@
+@page "/login"
+@namespace LoginComponent
+@using LoginExample.Authentication
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+<AuthorizeView>
+    <NotAuthorized>
+        <div>
+            <h3 style="margin-top:250px; margin-left: 500px">Login</h3>
+            <div class="form-group" style="margin-left: 500px">
+                <label>Username:</label>
+                <input style="border-radius: 10px" type="text" placeholder="user name" @bind-value="username"/>
+            </div>
+            <div class="form-group" style="margin-left: 500px">
+                <label>Password:</label>
+                <input style="border-radius: 10px" type="password" placeholder="password" @bind-value="password"/>
+            </div>
+            <div style="color:red">@errorMessage</div>
+
+            <a href="" @onclick="PerformLogin" style="margin-left: 500px">
+                Login
+            </a>
+            
+        </div>
+
+    </NotAuthorized>
+    <Authorized>
+        <a href="" @onclick="PerformLogout">
+            Log out
+        </a>
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    private string username;
+    private string password;
+    private string errorMessage;
+
+    public async Task PerformLogin() {
+        errorMessage = "";
+        try {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+        } catch (Exception e) {
+            errorMessage = e.Message;
+        }
+    }
+
+    public async Task PerformLogout() {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        } catch (Exception e) { }
+    }
+
+}

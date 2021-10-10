@@ -1,0 +1,90 @@
+@page "/Search"
+@using Models
+@using FileData
+@using global::Models
+
+<h1>Search</h1>
+
+<div id="sousuo" style="text-align: center">
+    <form class="chaxun">
+        <span><input style="width:400px; height: 30px; border-radius: 10px" type="text" placeholder="Entertext" @bind="text" /></span>
+        <span><button style="width: 70px; height: 30px;text-align: center; border-radius: 10px" type="button" @onclick="search">Search</button></span>
+    </form>
+</div>
+
+@if (_adults == null)
+{
+    <p>
+        <em>Error In File</em>
+    </p>
+}
+else
+{
+    <table class="table table-striped" style="margin-top: 30px">
+        <thead>
+        <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>HairColor</th>
+            <th>EyeColor</th>
+            <th>Age</th>
+            <th>Weight</th>
+            <th>Height</th>
+        </tr>
+        </thead>
+        @foreach (var adult in adults)
+           {
+               <tbody>
+               <tr>
+                   <td>@adult.FirstName</td>
+                   <td>@adult.LastName</td>
+                   <td>@adult.HairColor</td>
+                   <td>@adult.EyeColor</td>
+                   <td>@adult.Age</td>
+                   <td>@adult.Weight</td>
+                   <td>@adult.Height</td>
+               </tr>
+               </tbody>
+           }
+    </table>
+}
+
+
+
+@code {
+    private IList<Adult> _adults = new List<Adult>();
+    private IList<Adult> adults = new List<Adult>();
+    private string text;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _adults = new FileContext().Adults;
+    }
+
+    public void search()
+    {
+        for (int i = 0; i < _adults.Count; i++)
+        {
+            if (text!=null)
+            {
+                if (_adults[i].FirstName!=null)
+                {
+                    if (_adults[i].FirstName.Contains(text))
+                    {
+                        Console.WriteLine(_adults[i].FirstName);
+                        for (int a = 0; a < adults.Count; a++)
+                        {
+                            if (adults!=null)
+                            {
+                                adults.Remove(adults[a]);
+                            }
+                        }
+                        adults.Add(_adults[i]);
+                    }
+                }
+            }
+        }
+    }
+    
+
+}

@@ -1,0 +1,89 @@
+@page "/Add"
+@using Models
+@using FileData
+@using global::Models
+@using Microsoft.AspNetCore.Components
+
+<div>
+    <h3 style="margin:auto;">Add</h3>
+    <p style="font-size: 20px;margin: auto; width: 20%">Enter imformation</p>
+    <hr style="border: 2px solid black" />
+</div>
+
+<div style="margin-left: 300px;   width: 40%;" class="main">
+    <form>
+        <div class="a" style="float: left">
+            <div>
+                <br/>
+                <label>FirstName:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="FirstName" @bind="_adult.FirstName"/>
+            </div>
+            <div>
+                <br/>
+                <label>LastName:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="LastName" @bind="_adult.LastName"/>
+            </div>
+            <div>
+                <br/>
+                <label>HairColor:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="HairColor" @bind="_adult.HairColor"/>
+            </div>
+            <div>
+                <br/>
+                <label>EyeColor:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="EyeColor" @bind="_adult.EyeColor"/>
+            </div>
+        </div>
+        <div class="b" style="float: right">
+            <br/>
+            <div>
+                <label>Age:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="Age" @bind="_adult.Age"/>
+            </div>
+            <div>
+                <br/>
+                <label>Weight:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="Weight" @bind="_adult.Weight"/>
+            </div>
+            <div>
+                <br/>
+                <label>Height:</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="Height" @bind="_adult.Height"/>
+            </div>
+            <div>
+                <br/>
+                <label>Sex</label>
+                <br/>
+                <input style="border-radius: 10px" placeholder="Sex" @bind="_adult.Sex"/>
+            </div>
+            <br/>
+            <br/>
+        </div>
+
+        <div class="container mt-3" style="padding-top: 20px; width: 50%">
+            <button  type="button" @onclick="save" style="width: 100%;">Save</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+@code {
+    private Adult _adult = new Adult();
+    private FileContext _fileContext = new FileContext();
+
+    public void save()
+    {
+        _fileContext.Adults.Add(_adult);
+        _fileContext.SaveChanges();
+    }
+
+}
