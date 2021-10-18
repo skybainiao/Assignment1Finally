@@ -21,7 +21,7 @@ public class InMemoryUserService : IUserService {
             new User {
                 City = "Aarhus",
                 Domain = "hotmail.com",
-                Password = "123456",
+                Password = "dsajio",
                 Role = "Student",
                 BirthYear = 1998,
                 SecurityLevel = 3,
