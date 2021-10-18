@@ -8,7 +8,6 @@ namespace FileData
 {
     public class FileContext
     {
-        public IList<Family> Families { get; private set; }
         public IList<Adult> Adults { get; private set; }
         
         private readonly string adultsFile = "adults.json";
