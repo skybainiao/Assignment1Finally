@@ -13,84 +13,84 @@ namespace LoginExample.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 1 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 2 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 3 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 4 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 5 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 6 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 7 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 8 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using LoginExample;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\45527\RiderProjects\Assignment1Finally1\_Imports.razor"
+#line 9 "C:\Users\45527\RiderProjects\Assignment1Finally\_Imports.razor"
 using LoginExample.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\45527\RiderProjects\Assignment1Finally1\Pages\Search.razor"
+#line 2 "C:\Users\45527\RiderProjects\Assignment1Finally\Pages\Search.razor"
 using Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\45527\RiderProjects\Assignment1Finally1\Pages\Search.razor"
+#line 3 "C:\Users\45527\RiderProjects\Assignment1Finally\Pages\Search.razor"
 using FileData;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\45527\RiderProjects\Assignment1Finally1\Pages\Search.razor"
+#line 4 "C:\Users\45527\RiderProjects\Assignment1Finally\Pages\Search.razor"
 using global::Models;
 
 #line default
@@ -105,7 +105,7 @@ using global::Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 54 "C:\Users\45527\RiderProjects\Assignment1Finally1\Pages\Search.razor"
+#line 54 "C:\Users\45527\RiderProjects\Assignment1Finally\Pages\Search.razor"
        
     private IList<Adult> _adults = new List<Adult>();
     private IList<Adult> adults = new List<Adult>();
