@@ -46,16 +46,17 @@ else
 
 @code {
     private IList<Adult> _adults = new List<Adult>();
-    
+    private FileContext _fileContext = new FileContext();
 
     protected override async Task OnInitializedAsync()
     {
-        _adults = new FileContext().Adults;
+        _adults = _fileContext.Adults;
     }
 
     private void Delete(Adult adult)
     {
         _adults.Remove(adult);
+        _fileContext.SaveChanges();
     }
 
 }

@@ -101,16 +101,17 @@ using global::Models;
 #line 47 "C:\Users\45527\RiderProjects\Assignment1Finally\Pages\PersonList.razor"
        
     private IList<Adult> _adults = new List<Adult>();
-    
+    private FileContext _fileContext = new FileContext();
 
     protected override async Task OnInitializedAsync()
     {
-        _adults = new FileContext().Adults;
+        _adults = _fileContext.Adults;
     }
 
     private void Delete(Adult adult)
     {
         _adults.Remove(adult);
+        _fileContext.SaveChanges();
     }
 
 
