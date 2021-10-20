@@ -2,18 +2,6 @@
   {
     "JobTitle": null,
     "Id": 0,
-    "FirstName": "Junjie",
-    "LastName": "Chen",
-    "HairColor": "black",
-    "EyeColor": "black",
-    "Age": 19,
-    "Weight": 110,
-    "Height": 165,
-    "Sex": "male"
-  },
-  {
-    "JobTitle": null,
-    "Id": 0,
     "FirstName": "Chenben",
     "LastName": "Tong",
     "HairColor": "black",
@@ -38,13 +26,13 @@
   {
     "JobTitle": null,
     "Id": 0,
-    "FirstName": "jack",
-    "LastName": "CC",
+    "FirstName": "Jack",
+    "LastName": "Chen",
     "HairColor": "black",
     "EyeColor": "blue",
-    "Age": 19,
-    "Weight": 120,
-    "Height": 0,
+    "Age": 22,
+    "Weight": 108,
+    "Height": 180,
     "Sex": "male"
   }
 ]
