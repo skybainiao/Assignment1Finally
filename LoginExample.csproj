@@ -4,4 +4,10 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <None Update="Shared\NavMenu.css">
+        <DependentUpon>NavMenu.razor</DependentUpon>
+      </None>
+    </ItemGroup>
+
 </Project>

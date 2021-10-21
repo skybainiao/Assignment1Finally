@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj": {}
+    "D:\\JetBrainsRider\\Assignment1Finally12\\LoginExample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj": {
+    "D:\\JetBrainsRider\\Assignment1Finally12\\LoginExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj",
+        "projectUniqueName": "D:\\JetBrainsRider\\Assignment1Finally12\\LoginExample.csproj",
         "projectName": "LoginExample",
-        "projectPath": "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj",
-        "packagesPath": "C:\\Users\\45527\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\obj\\",
+        "projectPath": "D:\\JetBrainsRider\\Assignment1Finally12\\LoginExample.csproj",
+        "packagesPath": "C:\\Users\\Chenben Tong\\.nuget\\packages\\",
+        "outputPath": "D:\\JetBrainsRider\\Assignment1Finally12\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\45527\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Chenben Tong\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

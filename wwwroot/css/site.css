@@ -47,7 +47,7 @@ app {
 }
 
 .sidebar {
-    background-color: black;
+    
 }
 
     .sidebar .top-row {
@@ -85,7 +85,7 @@ app {
             height: 3rem;
             display: flex;
             align-items: center;
-            line-height: 3rem;
+            line-height: 7rem;
         }
 
             .sidebar .nav-item a.active {
@@ -151,7 +151,7 @@ app {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
     app {
         flex-direction: row;
     }
