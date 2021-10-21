@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\45527\\RiderProjects\\Assignment1Finally\\LoginExample.csproj": {}
+    "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\45527\\RiderProjects\\Assignment1Finally\\LoginExample.csproj": {
+    "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\45527\\RiderProjects\\Assignment1Finally\\LoginExample.csproj",
+        "projectUniqueName": "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj",
         "projectName": "LoginExample",
-        "projectPath": "C:\\Users\\45527\\RiderProjects\\Assignment1Finally\\LoginExample.csproj",
+        "projectPath": "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\LoginExample.csproj",
         "packagesPath": "C:\\Users\\45527\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\45527\\RiderProjects\\Assignment1Finally\\obj\\",
+        "outputPath": "C:\\Users\\45527\\RiderProjects\\Sep3Assignment1\\Assignment1Finally\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\45527\\AppData\\Roaming\\NuGet\\NuGet.Config"

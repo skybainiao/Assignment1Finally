@@ -1,9 +1,10 @@
 @page "/Search"
-@using Models
 @using FileData
 @using global::Models
 
-<h1>Search</h1>
+<h1 style="color: white">Search</h1>
+<hr style="border: 2px solid white" />
+<br>
 
 <div id="sousuo" style="text-align: center">
     <form class="chaxun">
@@ -22,7 +23,7 @@ else
 {
     <table class="table table-striped" style="margin-top: 30px">
         <thead>
-        <tr>
+        <tr style="color: white">
             <th>FirstName</th>
             <th>LastName</th>
             <th>HairColor</th>
@@ -32,10 +33,10 @@ else
             <th>Height</th>
         </tr>
         </thead>
-        @foreach (var adult in adults)
+        @foreach (var adult in _adults)
            {
                <tbody>
-               <tr>
+               <tr style="color: white">
                    <td>@adult.FirstName</td>
                    <td>@adult.LastName</td>
                    <td>@adult.HairColor</td>

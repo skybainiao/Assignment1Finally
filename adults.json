@@ -22,17 +22,5 @@
     "Weight": 110,
     "Height": 165,
     "Sex": "female"
-  },
-  {
-    "JobTitle": null,
-    "Id": 0,
-    "FirstName": "Jack",
-    "LastName": "Chen",
-    "HairColor": "black",
-    "EyeColor": "blue",
-    "Age": 22,
-    "Weight": 108,
-    "Height": 180,
-    "Sex": "male"
   }
 ]

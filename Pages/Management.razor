@@ -1,12 +1,7 @@
-﻿@page "/PersonList"
-@using FileData
+﻿@page "/Management"
 @using global::Models
-
-<h1 style="color: white">Person List</h1>
-
-<p style="color: white">This is the data of all personnel.</p>
-<hr style="border: 2px solid white" />
-<br>
+@using FileData
+<h3>Management</h3>
 
 @if (_adults == null)
 {
@@ -39,14 +34,17 @@ else
                 <td>@adult.Age</td>
                 <td>@adult.Weight</td>
                 <td>@adult.Height</td>
-                <button @onclick="() => Delete(adult)">Delete</button>
+            
             </tr> 
         }
         </tbody>
     </table>
 }
 
+
+
 @code {
+
     private IList<Adult> _adults = new List<Adult>();
     private FileContext _fileContext = new FileContext();
 
@@ -54,11 +52,8 @@ else
     {
         _adults = _fileContext.Adults;
     }
-
-    private void Delete(Adult adult)
-    {
-        _adults.Remove(adult);
-        _fileContext.SaveChanges();
-    }
-
+    
+    
+    
+    
 }

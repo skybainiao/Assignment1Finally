@@ -7,13 +7,13 @@
 
 <AuthorizeView>
     <NotAuthorized>
-        <div style="left: 44%; right: 50%; margin-top: 300px; position: absolute">
+        <div style="left: 44%; right: 50%; margin-top: 300px; position: absolute; color: white">
             <h3 >Login</h3>
             <div class="form-group">
                 <label>Username:</label>
                 <input style="border-radius: 10px" type="text" placeholder="user name" @bind-value="username"/>
             </div>
-            <div class="form-group">
+            <div class="form-group">  
                 <label>Password:</label>
                 <input style="border-radius: 10px" type="password" placeholder="password" @bind-value="password"/>
             </div>
@@ -27,7 +27,7 @@
 
     </NotAuthorized>
     <Authorized>
-        <a href="" @onclick="PerformLogout">
+        <a href="" @onclick="PerformLogout" style="color: white">
             Log out
         </a>
     </Authorized>
