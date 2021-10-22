@@ -111,7 +111,7 @@ using Microsoft.AspNetCore.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 79 "D:\JetBrainsRider\Assignment1Finally12\Pages\Add.razor"
+#line 77 "D:\JetBrainsRider\Assignment1Finally12\Pages\Add.razor"
        
     private Adult _adult = new Adult();
     private FileContext _fileContext = new FileContext();

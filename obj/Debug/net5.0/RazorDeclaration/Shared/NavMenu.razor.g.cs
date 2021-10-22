@@ -83,7 +83,7 @@ using LoginExample.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 23 "D:\JetBrainsRider\Assignment1Finally12\Shared\NavMenu.razor"
+#line 56 "D:\JetBrainsRider\Assignment1Finally12\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

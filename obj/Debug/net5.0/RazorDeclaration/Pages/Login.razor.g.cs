@@ -91,7 +91,7 @@ using LoginExample.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "D:\JetBrainsRider\Assignment1Finally12\Pages\Login.razor"
+#line 43 "D:\JetBrainsRider\Assignment1Finally12\Pages\Login.razor"
        
     private string username;
     private string password;

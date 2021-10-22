@@ -5,9 +5,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <None Update="Shared\NavMenu.css">
-        <DependentUpon>NavMenu.razor</DependentUpon>
-      </None>
+      <Folder Include="wwwroot\image" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Shared\NavMenu.css" />
     </ItemGroup>
 
 </Project>

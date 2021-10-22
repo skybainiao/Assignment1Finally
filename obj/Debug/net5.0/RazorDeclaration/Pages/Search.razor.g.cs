@@ -98,7 +98,7 @@ using global::Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "D:\JetBrainsRider\Assignment1Finally12\Pages\Search.razor"
+#line 54 "D:\JetBrainsRider\Assignment1Finally12\Pages\Search.razor"
        
     private IList<Adult> _adults = new List<Adult>();
     private IList<Adult> adults = new List<Adult>();

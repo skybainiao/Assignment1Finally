@@ -83,7 +83,7 @@ using LoginExample.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "D:\JetBrainsRider\Assignment1Finally12\Shared\MainLayout.razor"
+#line 20 "D:\JetBrainsRider\Assignment1Finally12\Shared\MainLayout.razor"
        
 
     [CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
