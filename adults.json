@@ -22,5 +22,41 @@
     "Weight": 160,
     "Height": 168,
     "Sex": "male"
+  },
+  {
+    "JobTitle": null,
+    "Id": 0,
+    "FirstName": "Junjie",
+    "LastName": "Chen",
+    "HairColor": "black",
+    "EyeColor": "black",
+    "Age": 19,
+    "Weight": 110,
+    "Height": 167,
+    "Sex": "male"
+  },
+  {
+    "JobTitle": null,
+    "Id": 0,
+    "FirstName": "zerui",
+    "LastName": "wu",
+    "HairColor": "black",
+    "EyeColor": "black",
+    "Age": 19,
+    "Weight": 120,
+    "Height": 169,
+    "Sex": "male"
+  },
+  {
+    "JobTitle": null,
+    "Id": 0,
+    "FirstName": "Junefei",
+    "LastName": "Chen",
+    "HairColor": "black",
+    "EyeColor": "black",
+    "Age": 19,
+    "Weight": 130,
+    "Height": 180,
+    "Sex": "male"
   }
 ]

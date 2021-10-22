@@ -123,7 +123,7 @@ using FileData;
       if (_adults[i].FirstName.Equals(_adult.FirstName) && _adults[i].LastName.Equals(_adult.LastName))
       {
         _adults.Remove(_adults[i]);
-        _adults.Add(_adult);
+        _adults.Add(_adult); 
       }
     }
     for (int a = 0; a < sadults.Count; a++)

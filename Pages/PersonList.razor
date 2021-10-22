@@ -27,6 +27,7 @@ else
             <th>Age</th>
             <th>Weight</th>
             <th>Height</th>
+            <th>Sex</th>
         </tr>
         </thead>
         <tbody>
@@ -40,6 +41,7 @@ else
                 <td>@adult.Age</td>
                 <td>@adult.Weight</td>
                 <td>@adult.Height</td>
+                <td>@adult.Sex</td>
                 <button class="btn btn-dark" @onclick="() => Delete(adult)" style="margin-right: 10px">Delete</button>
                 <button class="btn btn-dark" style="left: 10px" @onclick="() => Modify(adult)">Modify</button>
             </tr> 
