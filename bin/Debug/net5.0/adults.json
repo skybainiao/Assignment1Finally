@@ -18,7 +18,7 @@
     "LastName": "Tong",
     "HairColor": "black",
     "EyeColor": "black",
-    "Age": 11,
+    "Age": 12,
     "Weight": 160,
     "Height": 168,
     "Sex": "male"
@@ -26,13 +26,13 @@
   {
     "JobTitle": null,
     "Id": 0,
-    "FirstName": "Chenben",
-    "LastName": "Tong",
-    "HairColor": "black",
-    "EyeColor": "black",
-    "Age": 11,
-    "Weight": 160,
-    "Height": 168,
-    "Sex": "male"
+    "FirstName": "dwa",
+    "LastName": "dwad",
+    "HairColor": "dwad",
+    "EyeColor": "dwa",
+    "Age": 21,
+    "Weight": 0,
+    "Height": 0,
+    "Sex": null
   }
 ]

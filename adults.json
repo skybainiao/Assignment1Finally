@@ -18,21 +18,9 @@
     "LastName": "Tong",
     "HairColor": "black",
     "EyeColor": "black",
-    "Age": 12,
+    "Age": 21,
     "Weight": 160,
     "Height": 168,
     "Sex": "male"
-  },
-  {
-    "JobTitle": null,
-    "Id": 0,
-    "FirstName": "dwa",
-    "LastName": "dwad",
-    "HairColor": "dwad",
-    "EyeColor": "dwa",
-    "Age": 21,
-    "Weight": 0,
-    "Height": 0,
-    "Sex": null
   }
 ]

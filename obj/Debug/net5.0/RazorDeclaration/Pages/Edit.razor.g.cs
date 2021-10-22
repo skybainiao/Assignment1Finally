@@ -125,7 +125,6 @@ using FileData;
         _adults.Remove(_adults[i]);
         _adults.Add(_adult);
       }
-      
     }
     for (int a = 0; a < sadults.Count; a++)
     {
