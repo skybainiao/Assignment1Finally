@@ -1,6 +1,7 @@
 ﻿@page "/PersonList"
 @using FileData
 @using global::Models
+@inject NavigationManager _navigationManager;
 
 
 <hr style="border: 2px solid white" />
@@ -37,7 +38,8 @@ else
                 <td>@adult.Age</td>
                 <td>@adult.Weight</td>
                 <td>@adult.Height</td>
-                <button @onclick="() => Delete(adult)">Delete</button>
+                <button class="btn btn-dark" @onclick="() => Delete(adult)" style="margin-right: 10px">Delete</button>
+                <button class="btn btn-dark" style="left: 10px" @onclick="() => Modify(adult)">Modify</button>
             </tr> 
         }
         </tbody>
@@ -56,6 +58,18 @@ else
     private void Delete(Adult adult)
     {
         _adults.Remove(adult);
+        _fileContext.SaveChanges();
+    }
+
+    public void Go()
+    {
+        _navigationManager.NavigateTo("/Edit");
+    }
+    
+    public void Modify(Adult adult)
+    {
+        Go();
+        _fileContext.Sadults.Add(adult);
         _fileContext.SaveChanges();
     }
 

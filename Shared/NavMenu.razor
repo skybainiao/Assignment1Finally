@@ -1,56 +1,42 @@
 ﻿<AuthorizeView>
-    <div class="nav">
-        <div class="nav-ul">
-            <li class="nav-item">
-                <div class="item-content">
-                    <a href="/">
-                        Home
-                    </a>
-                </div>
-            </li>
-                
-            <li class="nav-item">
-                <div class="item-content">
-                    <a href="/personList">
-                        PersonList
-                    </a>
-                </div>
-            </li>
-            
-            <li class="nav-item">
-                <div class="item-content">
-                    <a href="/search">
-                        Search
-                    </a>
-                </div>
-            </li>
-            
-            <li class="nav-item">
-                <div class="item-content">
-                    <a href="/add">
-                        Add
-                    </a>
-                </div>
-            </li>
-            
-            <li class="nav-item">
-                <div class="item-content">
-                    <a href="/contactus">
-                        Contact us
-                    </a>
-                </div>
-            </li>
-            
-            <li class="nav-item">
-                <div class="item-content">
-                    <a href="/edit">
-                        Edit
-                    </a>
-                </div>
-            </li>
-            
-        </div>
+    <div class="top-row pl-4 navbar navbar-dark">
+        <a class="navbar-brand" href="">Assignment1</a>
+        <button class="navbar-toggler" @onclick="ToggleNavMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </div>
+    
+    <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+        <ul class="nav flex-column">
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                    <span class="oi oi-home" aria-hidden="true"></span> Home
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="personList">
+                    <span class="oi oi-list" aria-hidden="true"></span> PersonList
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="search">
+                    <span class="oi oi-magnifying-glass" aria-hidden="true"></span> Search
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="add">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Add
+                </NavLink>
+            </li>
+            <li class="nav-item px-3">
+                <NavLink class="nav-link" href="contactus">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Contact Us
+                </NavLink>
+            </li>
+
+        </ul>
+    </div>
+
 </AuthorizeView>
 
 @code {
