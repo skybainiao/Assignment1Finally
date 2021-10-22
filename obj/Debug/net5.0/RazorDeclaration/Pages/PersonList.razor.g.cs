@@ -98,7 +98,7 @@ using global::Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 49 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
+#line 51 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
        
     private IList<Adult> _adults = new List<Adult>();
     private FileContext _fileContext = new FileContext();
@@ -114,10 +114,23 @@ using global::Models;
         _fileContext.SaveChanges();
     }
 
+    public void Go()
+    {
+        _navigationManager.NavigateTo("/Edit");
+    }
+    
+    public void Modify(Adult adult)
+    {
+        Go();
+        _fileContext.Sadults.Add(adult);
+        _fileContext.SaveChanges();
+    }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager _navigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

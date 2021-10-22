@@ -311,6 +311,5 @@ C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\LoginExample.genruntimeconfig.cache
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\LoginExample.csproj.CopyComplete
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\RazorDeclaration\Pages\Edit.razor.g.cs
-C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\RazorDeclaration\Pages\Management.razor.g.cs
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\Razor\Pages\Edit.razor.g.cs
-C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\Razor\Pages\Management.razor.g.cs
+C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\sadults.json
