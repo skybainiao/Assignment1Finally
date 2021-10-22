@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace LoginComponent
+namespace LoginExample.Pages
 {
     #line hidden
     using System;
@@ -76,14 +76,21 @@ using LoginExample.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/chen/RiderProjects/Assignment1Finally/Pages/Login.razor"
-using LoginExample.Authentication;
+#line 2 "/Users/chen/RiderProjects/Assignment1Finally/Pages/Edit.razor"
+using global::Models;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/login")]
-    public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "/Users/chen/RiderProjects/Assignment1Finally/Pages/Edit.razor"
+using FileData;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Edit")]
+    public partial class Edit : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,39 +98,48 @@ using LoginExample.Authentication;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "/Users/chen/RiderProjects/Assignment1Finally/Pages/Login.razor"
+#line 89 "/Users/chen/RiderProjects/Assignment1Finally/Pages/Edit.razor"
        
-    private string username;
-    private string password;
-    private string errorMessage;
+  
+  public Adult _adult = new Adult();
+  private FileContext _fileContext = new FileContext();
+  private IList<Adult> sadults = new List<Adult>();
+  private IList<Adult> _adults = new List<Adult>();
 
-    public async Task PerformLogin() {
-        errorMessage = "";
-        try {
-            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
-            username = "";
-            password = "";
-        } catch (Exception e) {
-            errorMessage = e.Message;
-        }
+  protected override async Task OnInitializedAsync()
+  {
+    sadults = _fileContext.Sadults;
+    _adults = _fileContext.Adults;
+    for (int i = 0; i < sadults.Count; i++)
+    {
+      _adult = sadults[i];
     }
+  }
 
-    public async Task PerformLogout() {
-        errorMessage = "";
-        username = "";
-        password = "";
-        try {
-            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
-            NavigationManager.NavigateTo("/");
-        } catch (Exception e) { }
+  private void Submit()
+  {
+    for (int i = 0; i < _adults.Count; i++)
+    {
+      if (_adults[i].FirstName.Equals(_adult.FirstName) && _adults[i].LastName.Equals(_adult.LastName))
+      {
+        _adults.Remove(_adults[i]);
+      }
+      _adults.Add(_adult);
+      for (int a = 0; a < sadults.Count; a++)
+      {
+        sadults.Remove(sadults[a]);
+      }
+      _fileContext.SaveChanges();
     }
+  }
+
+
+
 
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591
