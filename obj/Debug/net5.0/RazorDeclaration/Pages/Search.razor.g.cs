@@ -89,6 +89,20 @@ using global::Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Search.razor"
+using LoginExample.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Search.razor"
+using LoginExample.Data.Impl;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Search")]
     public partial class Search : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,15 +112,16 @@ using global::Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Search.razor"
+#line 57 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Search.razor"
        
     private IList<Adult> _adults = new List<Adult>();
     private IList<Adult> adults = new List<Adult>();
     private string text;
+    private IAdultData iAdultData = new AdultService();
 
     protected override async Task OnInitializedAsync()
     {
-        _adults = new FileContext().Adults;
+        _adults = await iAdultData.GetAdultsAsync();
     }
 
     public void search()

@@ -315,7 +315,6 @@ C:/Users/45527/RiderProjects/Assignment1Finally/obj/Debug/net5.0/LoginExample.cs
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\appsettings.json
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\adults.json
-C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\sadults.json
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\LoginExample.exe
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\LoginExample.deps.json
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\LoginExample.runtimeconfig.json
@@ -376,3 +375,4 @@ C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\LoginExample.pdb
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\LoginExample.genruntimeconfig.cache
 C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\obj\Debug\net5.0\LoginExample.csproj.CopyComplete
+C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\bin\Debug\net5.0\sadults.json

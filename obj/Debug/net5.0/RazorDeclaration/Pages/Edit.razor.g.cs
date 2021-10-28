@@ -89,6 +89,20 @@ using FileData;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Edit.razor"
+using LoginExample.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Edit.razor"
+using LoginExample.Data.Impl;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/Edit")]
     public partial class Edit : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,18 +112,19 @@ using FileData;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 89 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Edit.razor"
+#line 91 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Edit.razor"
        
   
   public Adult _adult = new Adult();
   private FileContext _fileContext = new FileContext();
   private IList<Adult> sadults = new List<Adult>();
   private IList<Adult> _adults = new List<Adult>();
+  private IAdultData _adultData = new AdultService();
 
   protected override async Task OnInitializedAsync()
   {
     sadults = _fileContext.Sadults;
-    _adults = _fileContext.Adults;
+    _adults = await _adultData.GetAdultsAsync();
     for (int i = 0; i < sadults.Count; i++)
     {
       _adult = sadults[i];
@@ -120,10 +135,10 @@ using FileData;
   {
     for (int i = 0; i < _adults.Count; i++)
     {
-      if (_adults[i].FirstName.Equals(_adult.FirstName) && _adults[i].LastName.Equals(_adult.LastName))
+      if (_adults[i].Id == _adult.Id)
       {
-        _adults.Remove(_adults[i]);
-        _adults.Add(_adult); 
+        _adultData.RemoveAdultAsync(_adults[i].Id);
+        _adultData.AddAdultAsync(_adult);
       }
     }
     for (int a = 0; a < sadults.Count; a++)

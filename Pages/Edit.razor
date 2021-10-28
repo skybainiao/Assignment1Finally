@@ -1,6 +1,8 @@
 ﻿@page "/Edit"
 @using global::Models
 @using FileData
+@using LoginExample.Data
+@using LoginExample.Data.Impl
 <h3 style="color: white">Edit</h3>
 <p style="color: white">modify imformation</p>
 <hr style="border: 2px solid white" />
@@ -92,11 +94,12 @@
   private FileContext _fileContext = new FileContext();
   private IList<Adult> sadults = new List<Adult>();
   private IList<Adult> _adults = new List<Adult>();
+  private IAdultData _adultData = new AdultService();
 
   protected override async Task OnInitializedAsync()
   {
     sadults = _fileContext.Sadults;
-    _adults = _fileContext.Adults;
+    _adults = await _adultData.GetAdultsAsync();
     for (int i = 0; i < sadults.Count; i++)
     {
       _adult = sadults[i];
@@ -107,10 +110,10 @@
   {
     for (int i = 0; i < _adults.Count; i++)
     {
-      if (_adults[i].FirstName.Equals(_adult.FirstName) && _adults[i].LastName.Equals(_adult.LastName))
+      if (_adults[i].Id == _adult.Id)
       {
-        _adults.Remove(_adults[i]);
-        _adults.Add(_adult); 
+        _adultData.RemoveAdultAsync(_adults[i].Id);
+        _adultData.AddAdultAsync(_adult);
       }
     }
     for (int a = 0; a < sadults.Count; a++)

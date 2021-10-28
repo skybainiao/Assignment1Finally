@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "JobTitle": null,
+    "Id": 1,
+    "FirstName": "c",
+    "LastName": null,
+    "HairColor": null,
+    "EyeColor": null,
+    "Age": 0,
+    "Weight": 0,
+    "Height": 0,
+    "Sex": null
+  }
+]

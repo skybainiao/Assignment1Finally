@@ -89,6 +89,27 @@ using global::Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
+using System.Text.Json;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
+using LoginExample.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
+using LoginExample.Data.Impl;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/PersonList")]
     public partial class PersonList : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,20 +119,20 @@ using global::Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 53 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
+#line 56 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\PersonList.razor"
        
     private IList<Adult> _adults = new List<Adult>();
     private FileContext _fileContext = new FileContext();
+    private IAdultData _adultData = new AdultService();
 
     protected override async Task OnInitializedAsync()
     {
-        _adults = _fileContext.Adults;
+        _adults =  await _adultData.GetAdultsAsync();
     }
 
     private void Delete(Adult adult)
     {
-        _adults.Remove(adult);
-        _fileContext.SaveChanges();
+        _adultData.RemoveAdultAsync(adult.Id);
     }
 
     public void Go()

@@ -97,6 +97,20 @@ using global::Models;
 #nullable disable
 #nullable restore
 #line 5 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Add.razor"
+using LoginExample.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Add.razor"
+using LoginExample.Data.Impl;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Add.razor"
 using Microsoft.AspNetCore.Components;
 
 #line default
@@ -111,15 +125,20 @@ using Microsoft.AspNetCore.Components;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 79 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Add.razor"
+#line 81 "C:\Users\45527\RiderProjects\Sep3Assignment1\Assignment1Finally\Pages\Add.razor"
        
     private Adult _adult = new Adult();
-    private FileContext _fileContext = new FileContext();
+    private IAdultData iAdultData = new AdultService();
+    private IList<Adult> _adults = new List<Adult>();
 
-    public void save()
+    public async Task save()
     {
-        _fileContext.Adults.Add(_adult);
-        _fileContext.SaveChanges();
+        _adults = await iAdultData.GetAdultsAsync();
+        for (int i = 0; i < _adults.Count; i++)
+        {
+            _adult.Id = i;
+        }
+        iAdultData.AddAdultAsync(_adult);
     }
 
 

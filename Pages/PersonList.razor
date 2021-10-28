@@ -1,6 +1,9 @@
 ﻿@page "/PersonList"
 @using FileData
 @using global::Models
+@using System.Text.Json
+@using LoginExample.Data
+@using LoginExample.Data.Impl
 @inject NavigationManager _navigationManager;
 
 <h1 style="color: white">Person List</h1>
@@ -53,16 +56,16 @@ else
 @code {
     private IList<Adult> _adults = new List<Adult>();
     private FileContext _fileContext = new FileContext();
+    private IAdultData _adultData = new AdultService();
 
     protected override async Task OnInitializedAsync()
     {
-        _adults = _fileContext.Adults;
+        _adults =  await _adultData.GetAdultsAsync();
     }
 
     private void Delete(Adult adult)
     {
-        _adults.Remove(adult);
-        _fileContext.SaveChanges();
+        _adultData.RemoveAdultAsync(adult.Id);
     }
 
     public void Go()
