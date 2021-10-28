@@ -1,18 +1,6 @@
 [
   {
     "JobTitle": null,
-    "Id": 0,
-    "FirstName": null,
-    "LastName": null,
-    "HairColor": null,
-    "EyeColor": "dwadwa",
-    "Age": 0,
-    "Weight": 0,
-    "Height": 0,
-    "Sex": null
-  },
-  {
-    "JobTitle": null,
     "Id": 1,
     "FirstName": "c",
     "LastName": null,
