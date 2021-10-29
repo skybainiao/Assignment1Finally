@@ -7,20 +7,22 @@
 
 <AuthorizeView>
     <NotAuthorized>
-        <div style="left: 44%; right: 50%; margin-top: 100px; position: absolute; color: white">
+        <div>
             
-            <h1>Login</h1>
+            <h1 class="Login">Aurora</h1>
             <br>
             <div class="form-group">
-                <label>Username:</label>
-                <input style="border-radius: 10px" type="text" placeholder="user name" @bind-value="username"/>
-            </div>
-            <div class="form-group">
-                <label>Password:</label>
-                <input style="border-radius: 10px" type="password" placeholder="password" @bind-value="password"/>
-            </div>
+                <form>
+                    <input style="color: white;background-color: rgba(0,0,0,0.55);border-radius: 30px;width: 250px;height: 30px; text-align: center" type="text" placeholder="user name" @bind-value="username"/>
+                    <br>
+                    <input style="color:white;background-color: rgba(0,0,0,0.55);border-radius: 30px;width: 250px;height: 30px; text-align: center" type="password" placeholder="password" @bind-value="password"/>
+                    <br><br>
+                </form>
+                <div type="submit" class="oi oi-account-login" @onclick="PerformLogin"></div>
+                </div>
+            
             <div style="color:red">@errorMessage</div>
-            <button type="submit" class="login-button" @onclick="PerformLogin">Log in</button>
+            
             
         </div>
 

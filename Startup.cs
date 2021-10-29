@@ -23,6 +23,7 @@ public class Startup {
         services.AddRazorPages();
         services.AddServerSideBlazor();
         services.AddScoped<IUserService, InMemoryUserService>();
+        services.AddSingleton<IAdultData, AdultService>();
         
         services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
 

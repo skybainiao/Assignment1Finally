@@ -1,13 +1,16 @@
 @page "/Search"
 @using FileData
 @using global::Models
+@using LoginExample.Data
+@using LoginExample.Data.Impl
 
 <hr style="border: 2px solid white" />
 <br>
 
 <div id="sousuo" style="text-align: center">
     <form class="chaxun">
-        <span><input style="width:400px; height: 30px; border-radius: 10px" type="text" placeholder="Entertext" @bind="text" /></span>
+        <span><input style="width:400px; height: 30px; border-radius: 10px; text-align: center" type="text" placeholder="Entertext" @bind="text" /></span>
+        <br/>
         <span><button style="width: 70px; height: 30px;text-align: center; border-radius: 10px" type="button" @onclick="search">Search</button></span>
     </form>
 </div>
@@ -55,10 +58,11 @@ else
     private IList<Adult> _adults = new List<Adult>();
     private IList<Adult> adults = new List<Adult>();
     private string text;
+    private IAdultData iAdultData = new AdultService();
 
     protected override async Task OnInitializedAsync()
     {
-        _adults = new FileContext().Adults;
+        _adults = await iAdultData.GetAdultsAsync();
     }
 
     public void search()
@@ -85,6 +89,6 @@ else
             }
         }
     }
-    
+
 
 }

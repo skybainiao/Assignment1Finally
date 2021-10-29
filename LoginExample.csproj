@@ -5,11 +5,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="wwwroot\image" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove="Shared\NavMenu.css" />
+      <None Include="wwwroot\image\无标题.png" />
     </ItemGroup>
 
 </Project>

@@ -1,34 +1,112 @@
 ﻿@page "/Edit"
+@using global::Models
+@using FileData
+@using LoginExample.Data
+@using LoginExample.Data.Impl
+
 <hr style="border: 2px solid white" />
 <br>
 
-<div class="container mt-3">
-  <h3>多个输入框和文本</h3>
-  
+<div class="container mt-3" style="width: 30%;">
   <form>
     <div class="input-group mb-3">
-      <div class="input-group-prepend" style="right: 20px">
+      <div class="input-group-prepend">
         <span class="input-group-text">FirstName</span>
       </div>
-      <input type="text" class="form-control" placeholder="First Name">
-      <br>
+      <input type="text" class="form-control" placeholder="@_adult.FirstName" style="text-align: center" @bind="_adult.FirstName" >
+    </div>
+
+    <div class="input-group mb-3">
       <div>
         <span class="input-group-text">LastName</span>
       </div>
-      <input type="text" class="form-control" placeholder="Last Name">
+      <input type="text" class="form-control" placeholder="@_adult.LastName" style="text-align: center" @bind="_adult.LastName">
+    </div>
+    
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">HairColor</span>
+      </div>
+      <input type="text" class="form-control" placeholder="@_adult.HairColor" style="text-align: center" @bind="_adult.HairColor" >
+    </div>
+    
+    <div class="input-group mb-3">
+      <div>
+        <span class="input-group-text">EyeColor</span>
+      </div>
+      <input type="text" class="form-control" placeholder="@_adult.EyeColor" style="text-align: center" @bind="_adult.EyeColor">
+    </div>
+    
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Age</span>
+      </div>
+      <input type="text" class="form-control" placeholder="@_adult.Age" style="text-align: center" @bind="_adult.Age">
+    </div>
+    
+    <div class="input-group mb-3">
+      <div>
+        <span class="input-group-text">Weight</span>
+      </div>
+      <input type="text" class="form-control" placeholder="@_adult.Weight" style="text-align: center" @bind="_adult.Weight">
+    </div>
+    
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Height</span>
+      </div>
+      <input type="text" class="form-control" placeholder="@_adult.Height" style="text-align: center" @bind="_adult.Height">
+    </div>
+    
+    <div class="input-group mb-3">
+      <div>
+        <span class="input-group-text">Sex</span>
+      </div>
+      <input type="text" class="form-control" placeholder="@_adult.Sex" style="text-align: center" @bind="_adult.Sex">
     </div>
   </form>
- 
-  <form>
-    <div class="input-group-prepend">
 
-    </div>
-  </form>
-  
+  <button type="button" class="btn btn-dark btn-sm btn-block" @onclick="Submit">Submit</button>
+
 </div>
 
 
 
 @code {
-    
+  
+  public Adult _adult = new Adult();
+  private FileContext _fileContext = new FileContext();
+  private IList<Adult> sadults = new List<Adult>();
+  private IList<Adult> _adults = new List<Adult>();
+  private IAdultData _adultData = new AdultService();
+
+  protected override async Task OnInitializedAsync()
+  {
+    sadults = _fileContext.Sadults;
+    _adults = await _adultData.GetAdultsAsync();
+    for (int i = 0; i < sadults.Count; i++)
+    {
+      _adult = sadults[i];
+    }
+  }
+
+  private void Submit()
+  {
+    for (int i = 0; i < _adults.Count; i++)
+    {
+      if (_adults[i].Id == _adult.Id)
+      {
+        _adultData.RemoveAdultAsync(_adults[i].Id);
+        _adultData.AddAdultAsync(_adult);
+      }
+    }
+    for (int a = 0; a < sadults.Count; a++)
+    {
+      sadults.Remove(sadults[a]);
+    }
+    _fileContext.SaveChanges();
+  }
+
+
+
 }

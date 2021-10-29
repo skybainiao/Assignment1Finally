@@ -2,86 +2,94 @@
 @using Models
 @using FileData
 @using global::Models
+@using LoginExample.Data
+@using LoginExample.Data.Impl
 @using Microsoft.AspNetCore.Components
 
 <div>
     <hr style="border: 2px solid white" />
 </div>
-
-<div style="width:40%; margin: 50px auto;" class="main">
-    <form style="color: white">
-        <div class="a" style="float: left">
-            <div>
-                <br/>
-                <label>FirstName:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="FirstName" @bind="_adult.FirstName"/>
-            </div>
-            <div> 
-                <br/>
-                <label>LastName:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="LastName" @bind="_adult.LastName"/>
-            </div>
-            <div>
-                <br/>
-                <label>HairColor:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="HairColor" @bind="_adult.HairColor"/>
-            </div>
-            <div>
-                <br/>
-                <label>EyeColor:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="EyeColor" @bind="_adult.EyeColor"/>
-            </div>
+<br/>
+<div class="Family">
+    <div class="family">
+        <div class="family-title">
+            Family
         </div>
-        <div class="b" style="float: right">
-            <br/>
-            <div>
-                <label>Age:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="Age" @bind="_adult.Age"/>
+        <form class="family-form">
+            <div class="family-whole">
+                <div class="form-separate">
+                    <div class="form-class">
+                        <label class="label" for="height">Firstname:</label>
+                        <input class="input" type="text" id="firstname" style="text-align: center" placeholder="first name"
+                               @bind="@_adult.FirstName">
+                    </div>
+                    <div class="form-class">
+                        <label class="label" for="height">Lastname:</label>
+                        <input class="input" type="text" id="lastname" style="text-align: center" placeholder="last name"
+                               @bind="@_adult.LastName">
+                    </div>
+                    <div class="form-class">
+                        <label class="label" for="age">Age:</label>
+                        <input class="input" type="text" id="age" style="text-align: center" placeholder="age" @bind="@_adult.Age">
+                    </div>
+                    <div class="form-class">
+                        <label class="label" for="height">Sex:</label>
+                        <select class="input" style="width: 230px; height: 34px;text-align: center" @bind="@_adult.Sex">
+                            <option value="">
+                                Select sex
+                            </option>
+                            <option value="Male">
+                                Male
+                            </option>
+                            <option value="Female">
+                                Female
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            <div class="family-separate">
+                <div class="form-class">
+                    <label class="label" for="height">Hair:</label>
+                    <input class="input" type="text" id="hair-color" style="text-align: center" placeholder="hair color"
+                           @bind="@_adult.HairColor">
+                </div>
+                <div class="form-class">
+                    <label class="label" for="height">Eye:</label>
+                    <input class="input" type="text" id="eye-color" style="text-align: center" placeholder="eye color"
+                           @bind="@_adult.EyeColor">
+                </div>
+                <div class="form-class">
+                    <label class="label" for="height">Height:</label>
+                    <input class="input" type="text" id="height" style="text-align: center" placeholder="height"
+                           @bind="@_adult.Height">
+                </div>
+                <div class="form-class">
+                    <label class="label" for="weight">Weight:</label>
+                    <input class="input" type="text" id="weight" style="text-align: center" placeholder="weight"
+                           @bind="@_adult.Weight">
+                </div>
             </div>
-            <div>
-                <br/>
-                <label>Weight:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="Weight" @bind="_adult.Weight"/>
             </div>
-            <div>
-                <br/>
-                <label>Height:</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="Height" @bind="_adult.Height"/>
-            </div>
-            <div>
-                <br/>
-                <label>Sex</label>
-                <br/>
-                <input style="border-radius: 10px" placeholder="Sex" @bind="_adult.Sex"/>
-            </div>
-            <br/>
-            <br/>
-        </div>
-
-        <div class="container mt-3" style="padding-top: 20px; width: 50%">
-            <button  type="button" @onclick="save" style="width: 100%;">Save</button>
-        </div>
-    </form>
-</div>
-
+        </form>
+        <br/>
+        <button style="text-align: center; align-items: center; justify-content: center;" @onclick="save" @onclick:preventDefault="true">Submit</button>
+    </div>
+       </div>
 
 
 
 @code {
     private Adult _adult = new Adult();
-    private FileContext _fileContext = new FileContext();
+    private IAdultData iAdultData = new AdultService();
+    private IList<Adult> _adults = new List<Adult>();
 
-    public void save()
+    public async Task save()
     {
-        _fileContext.Adults.Add(_adult);
-        _fileContext.SaveChanges();
+        _adults = await iAdultData.GetAdultsAsync();
+        for (int i = 0; i < _adults.Count; i++)
+        {
+            _adult.Id = i;
+        }
+        iAdultData.AddAdultAsync(_adult);
     }
-
 }
