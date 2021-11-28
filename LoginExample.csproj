@@ -5,7 +5,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Assignment2API" />
+      <Folder Include="ClassDiagram" />
     </ItemGroup>
 
 </Project>
