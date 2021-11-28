@@ -13,91 +13,91 @@ namespace LoginExample.Pages
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 1 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 2 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 3 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 4 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 5 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 6 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 7 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 8 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using LoginExample;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/_Imports.razor"
+#line 9 "C:\Users\45527\RiderProjects\Assignment1Finally12\_Imports.razor"
 using LoginExample.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/Pages/Edit.razor"
+#line 2 "C:\Users\45527\RiderProjects\Assignment1Finally12\Pages\Edit.razor"
 using global::Models;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/Pages/Edit.razor"
+#line 3 "C:\Users\45527\RiderProjects\Assignment1Finally12\Pages\Edit.razor"
 using FileData;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/Pages/Edit.razor"
+#line 4 "C:\Users\45527\RiderProjects\Assignment1Finally12\Pages\Edit.razor"
 using LoginExample.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/Pages/Edit.razor"
+#line 5 "C:\Users\45527\RiderProjects\Assignment1Finally12\Pages\Edit.razor"
 using LoginExample.Data.Impl;
 
 #line default
@@ -112,7 +112,7 @@ using LoginExample.Data.Impl;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 91 "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/Pages/Edit.razor"
+#line 91 "C:\Users\45527\RiderProjects\Assignment1Finally12\Pages\Edit.razor"
        
   
   public Adult _adult = new Adult();

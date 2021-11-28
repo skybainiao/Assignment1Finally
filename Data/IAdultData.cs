@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using LoginExample.Models;
 using Models;
 
 namespace LoginExample.Data
@@ -10,5 +11,9 @@ namespace LoginExample.Data
         Task AddAdultAsync(Adult adult);
 
         Task RemoveAdultAsync(int id);
+
+        Task<IList<User>> GetUsersAsync();
+
+        Task AddUserAsync(User user);
     }
 }

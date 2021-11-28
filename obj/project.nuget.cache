@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RXtI+meDrhHMuUWoy/gSrpQDCJGaC9ycaGJNn161tJ1skKkMGQvW6mj/oBmFxpxJzrvD0VUw4yjoroUjCMki5w==",
+  "dgSpecHash": "27Lw1ZZ3pxcPqDHds8WUu3hMdLpHpmvXlqmfJQDyKicUHBrKgyH/+jZ3k6GF7o6yVP/uh4U5VQjfiWCd4Il4Qg==",
   "success": true,
-  "projectFilePath": "/Users/chen/Desktop/Sep3Assignment1/Assignment1Finally/LoginExample.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\45527\\RiderProjects\\Assignment1Finally12\\LoginExample.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\45527\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }

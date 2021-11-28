@@ -5,38 +5,12 @@ using LoginExample.Models;
 
 namespace LoginExample.Data.Impl {
 public class InMemoryUserService : IUserService {
-    private List<User> users;
+    private IList<User> users;
+    private IAdultData _adultData = new AdultService();
 
-    public InMemoryUserService() {
-        users = new[] {
-            new User {
-                City = "Horsens",
-                Domain = "via.dk",
-                Password = "123456",
-                Role = "Teacher",
-                BirthYear = 1986,
-                SecurityLevel = 5,
-                UserName = "Troels"
-            },
-            new User {
-                City = "Aarhus",
-                Domain = "hotmail.com",
-                Password = "dsajio",
-                Role = "Student",
-                BirthYear = 1998,
-                SecurityLevel = 3,
-                UserName = "Chen"
-            },
-            new User {
-                City = "Vejle",
-                Domain = "via.com",
-                Password = "123456",
-                Role = "Guest",
-                BirthYear = 1973,
-                SecurityLevel = 1,
-                UserName = "Kasper"
-            }
-        }.ToList();
+    public InMemoryUserService()
+    {
+        users = _adultData.GetUsersAsync().Result;
     }
 
 

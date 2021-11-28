@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using LoginExample.Models;
 using Models;
 
 namespace LoginExample.Data.Impl
@@ -11,6 +12,30 @@ namespace LoginExample.Data.Impl
     public class AdultService : IAdultData
     {
 
+        public async Task<IList<User>> GetUsersAsync()
+        {
+            using HttpClient client = new HttpClient();
+            Task<string> stringAsync = client.GetStringAsync("https://localhost:5002/User");
+            string message = await stringAsync;
+            IList<User> result = JsonSerializer.Deserialize<List<User>>(message, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            return result;
+        }
+        
+        public async Task AddUserAsync(User user)
+        {
+            using HttpClient client = new HttpClient();
+            string adultAsJson = JsonSerializer.Serialize(user, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            });
+            HttpContent content1 = new StringContent(adultAsJson, Encoding.UTF8, "application/json");
+            await client.PostAsync( "https://localhost:5002/User", content1 );
+        }
+        
+        
 
         public async Task<IList<Adult>> GetAdultsAsync()
         {
@@ -42,7 +67,6 @@ namespace LoginExample.Data.Impl
             using HttpClient client = new HttpClient();
             await client.DeleteAsync("https://localhost:5002/Person" + $"/{id}");
         }
-
 
 
 
